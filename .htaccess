@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^usuarios usuarios/controller.php
+RewriteRule ^gestion gestion/controller.php
+RewriteRule ^renta renta/controller.php
+RewriteRule ^ventas ventas/controller.php
+RewriteRule ^generica generica/controller.php
+RewriteRule ^enaipeVG generica/controller.php
