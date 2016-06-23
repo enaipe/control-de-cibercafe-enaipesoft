@@ -18,7 +18,7 @@
             <div class="item">
                 <img src="/enaipeVG/sitie_media/img/carpetas.jpg" alt="Second slide">
                 <div class="carousel-caption">
-                    <h1 class="label-info">CARPETAS A SOLO <label class="text-danger">$2.00</label></h1>                   
+                    <h1 class="label-info">CARPETAS A SOLO <label class="text-danger">$1.99</label></h1>                   
                 </div>
             </div>           
         </div>
