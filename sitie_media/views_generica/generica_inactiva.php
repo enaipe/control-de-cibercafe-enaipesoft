@@ -12,7 +12,7 @@
             <div class="item active ">
                 <img src="/enaipeVG/sitie_media/img/memoria-usb.jpg" alt="First slide" >
                 <div class="carousel-caption">
-                    <h1 class="label-success">MEMORIAS 16Gb A SOLO <label class="text-danger">$125.00</label></h1>                      
+                    <h1 class="label-success">MEMORIAS 16Gb A SOLO <label class="text-danger">$135.00</label></h1>                      
                 </div>
             </div>
             <div class="item">
