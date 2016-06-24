@@ -8,7 +8,8 @@ class Usuarios extends DBAbstractModel {
         $this->query = "SELECT
                 SUBTIME(CURRENT_TIME,TIME(renta.Hinicio)) AS tiempo_transcurrido,
                 (ROUND(((0.1328*((TIME_TO_SEC(SUBTIME(CURRENT_TIME,TIME(renta.Hinicio)))/60))) + 2.9884),0))+(4*controles - 4) AS total_Actual,
-                SUBTIME(CURRENT_TIME,ADDTIME(TIME(renta.Hinicio),(SUBTIME(TIME(renta.Hfinal),TIME(renta.Hinicio))))) AS tiempo_finalizar
+                SUBTIME(CURRENT_TIME,ADDTIME(TIME(renta.Hinicio),(SUBTIME(TIME(renta.Hfinal),TIME(renta.Hinicio))))) AS tiempo_finalizar,
+                SUBTIME(CURRENT_TIME,ADDTIME(TIME(renta.Hinicio),(SUBTIME(TIME(renta.Hfinal),TIME(renta.Hinicio))))) AS tiempo_finalizar,SUBTIME(TIME(renta.Hfinal),TIME(renta.Hinicio)) AS tiempo_renta    
                 FROM
                  juegos ,
                  renta

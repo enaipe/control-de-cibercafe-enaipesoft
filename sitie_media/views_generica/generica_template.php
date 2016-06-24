@@ -21,16 +21,46 @@
         <script src="/enaipeVG/sitie_media/js/jquery-1.10.1.min.js"></script>
         <script>
 //            $(document).ready(function () {
-//                var1 = $('#val').val();
-//                var2 = $('#val1').val();
-//                var3 = new Date(var2).getHours();
-//                if (var3 > 0) {
-//                    alert(var3 + " es mayor a cero ");
-//                } else {
-//                    alert(var3 + " es menor a cero ");
-//                }
+//
+////                $('#btn').click(function () {
+//                    var x1 = $('#tiempo_transcurrido').val();
+//                    var x2 = $('#tiempo_renta').val();
+//
+//                    alert(x1 + " " + logica(x1, x2) + " " + x2);
+//                    function logica(x, y) {
+//                        var simb = "";
+//                        if (x > y) {
+//                            simb = '>';
+//                        } else {
+//                            simb = '<';
+//                        }
+//                        return simb;
+//                    }
+////                });
+//
 //
 //            });
+//            var x1 = $('#tiempo_transcurrido').val();
+//            var x2 = $('#tiempo_renta').val();
+//
+////            alert(x1 + ":" + x2);
+//
+//            if (x1 !== '') {
+//                alert(x1 + " " + logica(x1, x2) + " " + x2);
+//            } else {
+//                alert("tienes campos nulos")
+//            }
+//
+//
+//            function logica(x, y) {
+//                var simb = "";
+//                if (x >= y) {
+//                    simb = 'TU TIEMPO A FINALIZADO';
+//                } else {
+//                    simb = 'SOLICITA TU TIEMPO';
+//                }
+//                return simb;
+//            }
         </script>
 
     </head>
