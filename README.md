@@ -1,4 +1,4 @@
 # enaipevg
 control de cibercafe
 
-mne
+Proyecto realizado en el IDE Netbeans
