@@ -1,5 +1,4 @@
-# enaipeSoft
-#control de cibercafe
+##control de cibercafe
 
 Proyecto realizado en el IDE Netbeans
 
