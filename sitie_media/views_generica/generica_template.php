@@ -20,47 +20,23 @@
         <![endif]-->
         <script src="/enaipeVG/sitie_media/js/jquery-1.10.1.min.js"></script>
         <script>
-//            $(document).ready(function () {
-//
-////                $('#btn').click(function () {
-//                    var x1 = $('#tiempo_transcurrido').val();
-//                    var x2 = $('#tiempo_renta').val();
-//
-//                    alert(x1 + " " + logica(x1, x2) + " " + x2);
-//                    function logica(x, y) {
-//                        var simb = "";
-//                        if (x > y) {
-//                            simb = '>';
-//                        } else {
-//                            simb = '<';
-//                        }
-//                        return simb;
-//                    }
-////                });
-//
-//
-//            });
-//            var x1 = $('#tiempo_transcurrido').val();
-//            var x2 = $('#tiempo_renta').val();
-//
-////            alert(x1 + ":" + x2);
-//
-//            if (x1 !== '') {
-//                alert(x1 + " " + logica(x1, x2) + " " + x2);
-//            } else {
-//                alert("tienes campos nulos")
-//            }
-//
-//
-//            function logica(x, y) {
-//                var simb = "";
-//                if (x >= y) {
-//                    simb = 'TU TIEMPO A FINALIZADO';
-//                } else {
-//                    simb = 'SOLICITA TU TIEMPO';
-//                }
-//                return simb;
-//            }
+            $(document).ready(function () {
+
+                var x1 = $('#tiempo_transcurrido').val();
+                var x2 = $('#tiempo_renta').val();
+                if (x1.length > 0) {
+                    logica(x1, x2);
+
+                }
+                function logica(x, y) {
+                    var simb = "";
+                    if (x >= y) {
+                        simb = 'TU TIEMPO A FINALIZADO';
+                        alert("!! TU TIEMPO HA FINALIZADO ¡¡")
+                    }
+                    return simb;
+                }
+            });
         </script>
 
     </head>
