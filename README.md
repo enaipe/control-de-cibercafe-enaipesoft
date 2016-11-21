@@ -4,7 +4,7 @@ Proyecto realizado en el IDE Netbeans
 
 Sistema que es capaz de gestionar el tiempo por PC
 
-1) Historial de rentas
+1) Historial de renta
 
 2) Utilidad generada
 
