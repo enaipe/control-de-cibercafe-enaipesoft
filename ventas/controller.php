@@ -13,7 +13,7 @@ function headler() {
     $event = GET_ACCION;
     $peticiones = array(SEARCH_DATE);
     foreach ($peticiones as $value) {
-        $url_peticion = 'usuarios/' . $value;
+        $url_peticion = 'ventas/' . $value;
         if ((strpos($uri, $url_peticion)) == true) {
             $event = $value;
         }
@@ -22,19 +22,19 @@ function headler() {
 
     switch ($event) {
         case GET_ACCION:
-            if ($_POST) {
-                if ($_POST['enviar'] == 'Consultar') {
-                    $usuarios->get_fecha($tiempoIni, $tiempoFin);
-                    $array_fecha = $usuarios->rows;
-                    require_once '../sitie_media/views_ventas/ventas_template.php';
-                }
-            } else {
-                $html = retornar_vista($event);
-                print $html;
-            }
-
+            require_once '../sitie_media/views_ventas/ventas_template.php';
             break;
 
+        case SEARCH_DATE:
+            $usuarios->get_fecha($tiempoIni, $tiempoFin);
+            $array = $usuarios->rows;
+
+            $usuarios->get_user($tiempoIni, $tiempoFin);
+            $total = $usuarios->rows;
+
+            $mensaje = $usuarios->mensaje;
+            require_once '../sitie_media/views_ventas/ventas_template.php';
+            break;
 
         default:
             header("location:/enaipeVG/usuarios/");

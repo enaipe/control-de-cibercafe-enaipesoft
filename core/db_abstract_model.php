@@ -49,6 +49,7 @@ abstract class DBAbstractModel {
     }
 
     protected function get_results_from_query() {
+        unset($this->rows);
         $this->open_connection();
         $result = $this->conn->query($this->query);
         while ($this->rows[] = $result->fetch_assoc());

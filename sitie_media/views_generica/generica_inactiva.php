@@ -12,13 +12,13 @@
             <div class="item active ">
                 <img src="/enaipeVG/sitie_media/img/memoria-usb.jpg" alt="First slide" >
                 <div class="carousel-caption">
-                    <h1 class="label-success">MEMORIAS 16Gb A SOLO <label class="text-danger">$120.00</label></h1>                      
+                    <h1 class="label-success">MEMORIAS 16Gb A SOLO <label class="text-danger">$130.00</label></h1>                      
                 </div>
             </div>
             <div class="item">
                 <img src="/enaipeVG/sitie_media/img/carpetas.jpg" alt="Second slide">
                 <div class="carousel-caption">
-                    <h1 class="label-info">CARPETAS A SOLO <label class="text-danger">$1.90</label></h1>                   
+                    <h1 class="label-info">CARPETAS A SOLO <label class="text-danger">$2.00</label></h1>                   
                 </div>
             </div>           
         </div>
@@ -31,6 +31,6 @@
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
+        </a>        
     </div>
 </form>

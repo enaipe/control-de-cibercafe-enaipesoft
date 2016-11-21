@@ -32,7 +32,7 @@ function headler() {
             $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
             if (($_SESSION['validate'] == 1) || ($_SESSION['validate'] == 0)) {
                 $user_name = $usuario->name_user;
-                $html = retornar_vista(VIEW_WELCOME, 'Usuario ' . $user_name);
+                $html = retornar_vista(VIEW_WELCOME, $user_name);
             } else {
                 ?>
                 <script type="text/javascript">

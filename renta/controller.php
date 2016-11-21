@@ -64,9 +64,10 @@ function headler() {
             break;
 
         case SET_FINALIZAR:
+            //form nos identifca que renta sera eliminada
             $index = $_POST['form'];
-            $pago = $_POST[$index]['total_Actual'];
-            $cant = $_POST[$index]['tiempo_total'];
+            $pago = $_POST['total_Actual'];
+            $cant = $_POST['tiempo_trans'];
             $id = $_POST[$index]['id'];
             $usuario->edit_user($id);
             $usuario->delete_user($id, $cant, $pago);

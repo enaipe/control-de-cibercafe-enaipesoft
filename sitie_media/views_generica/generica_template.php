@@ -31,7 +31,6 @@
                 function logica(x, y) {
                     var simb = "";
                     if (x >= y) {
-                        simb = 'TU TIEMPO A FINALIZADO';
                         alert("!! TU TIEMPO HA FINALIZADO ¡¡")
                     }
                     return simb;
@@ -41,7 +40,7 @@
 
     </head>
     <body>
-        <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
+        <a class="navbar-brand visible-lg" rel="home" href="#">
             <img class="img-responsive" style="max-width:200px; margin-top: +42px;"
                  src="/enaipeVG/sitie_media/img/enaipe_logo.png">
         </a>
@@ -53,14 +52,17 @@
 
         <div id="formulario">
             {formulario}
+        </div>
 
+        <div class="panel-footer">
+            <p class="">&copy; 2016 realizado por enaipeSoft.</p>
+        </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
+        <script src="/enaipeVG/boots_template/js/jquery-1.11.2.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
-            <script src="/enaipeVG/boots_template/js/jquery-1.11.2.min.js"></script>
-            <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-            <script src="/enaipeVG/boots_template/js/bootstrap.min.js"></script>
+        <script src="/enaipeVG/boots_template/js/bootstrap.min.js"></script>
     </body>
 </html>

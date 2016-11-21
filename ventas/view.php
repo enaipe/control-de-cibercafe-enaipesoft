@@ -25,11 +25,12 @@ function render_dinamic_data($array, $html) {
 function retornar_vista($event = '', $data = array()) {
 
     global $diccionario;
-    $template = '../sitie_media/template.php';
+    $template = '../sitie_media/views_ventas/ventas_template.php';
     $html = file_get_contents($template);
     $html = str_replace('{formulario}', get_template($event), $html);
     $html = str_replace('{menu}', get_template('menu'), $html);
     $html = str_replace('{mensaje}', '', $html);
+    
     if($data) {
         $html = render_dinamic_data($data[0], $html);
     }

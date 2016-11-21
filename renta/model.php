@@ -107,7 +107,7 @@ class Usuarios extends DBAbstractModel {
         $this->mensaje = 'Usuario Agregado';
     }
 
-#finalizar rentas
+#finalizar rentas*************
 
     public function edit_user($id = '') {
         $this->query = "UPDATE renta SET estatus='1'  WHERE id='$id'";
@@ -123,7 +123,7 @@ class Usuarios extends DBAbstractModel {
         $this->mensaje = 'Renta Modificada';
     }
 
-#eliminar renta activa por id
+#eliminar renta activa por id***********
 
     public function delete_user($id = '', $cant = '', $pago = '') {
         $this->query = "INSERT INTO lineaderenta (Renta_id,cantidadHora,pago)

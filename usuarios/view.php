@@ -32,7 +32,7 @@ function retornar_vista($event = '', $user_name = '') {
 
     $html = render_dinamic_data($diccionario['subtitle'], $html);
     $html = str_replace('{formulario}', $form, $html);
-    $html = str_replace('{mensaje}', $user_name, $html);
+//    $html = str_replace('{mensaje}', $user_name, $html);
 
 
     if ($_SESSION) {
@@ -41,6 +41,7 @@ function retornar_vista($event = '', $user_name = '') {
             $html = str_replace('{menu}', get_template('menu'), $html);
         }
     }
+    $html = str_replace('{mensaje}', $user_name, $html);
     $html = str_replace('{menu}', '', $html);
     return $html;
 }
