@@ -35,7 +35,7 @@ function renta_user(id) {
 }
 //**** modulo renta********
 function agregar_renta(id) {
-    
+
     if (confirm("Seguro que deseas Agregar Renta")) {
         var id_user_rentar = id;
         document.getElementById('id_user_rentar').value = id_user_rentar;
@@ -68,6 +68,11 @@ function pagada_renta(id) {
         alert('No se actualizo el pago id: ' + id);
 
     }
+
+}
+function agregaVenta() {
+
+      alert("En proceso Amor!!!!!!");
 
 }
 

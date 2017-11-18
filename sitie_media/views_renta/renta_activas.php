@@ -6,10 +6,10 @@
                 <th>Nombre</th>   
                 <th>HORA INICIO</th>
                 <th>HORA A FINALIZAR</th>                
-                <th>NUM.CONTROLES</th>
+                <th>CONTROLES</th>
                 <th class="alert-warning">TOTAL RENTA</th>
                 <th class="">Tiempo Transurrido</th>
-                <th>TIEMPO RENTA</th>
+                <th>TIEMPO QUE SOLICITO</th>
                 <th>$ TOTAL A PAGAR</th>
                 <th>$ TOTAL ACTUAL</th>
                 <th></th>
@@ -23,11 +23,12 @@
             //  require 'controller.php';
             clearstatcache();
 
-            
+
             logica($array);
 
             function logica($row) {
-                $clase = ""; $disa = "";
+                $clase = "";
+                $disa = "";
 
                 for ($i = 0; $i < count($row); $i++) {
                     $id = $row[$i]['id'];
@@ -35,33 +36,36 @@
                     $tiempo_final = $row[$i]['tiempo_finalizar'];
                     if ($tiempo_final > "00:00:00") {
                         $clase = "alert-danger";
-                        echo '<audio id="demo" src="/enaipeVG/sitie_media/audio/DLD.mp3" autoplay></audio>';
-                       echo"<script type=\"text/javascript\">alert('termino'); </script>";
+                        echo '<audio id="demo" src="/enaipeVG/sitie_media/audio/keyboard_desk.mp3" autoplay></audio>';
+                        echo"<script type=\"text/javascript\">alert('termino'); </script>";
                     } else {
                         $clase = "";
                     }
 
                     if ($row[$i]['pago'] == '1') {
                         $disa = "glyphicon glyphicon-thumbs-up";
+                        $styl = "";
                     } else {
                         $disa = "glyphicon glyphicon-thumbs-down";
+                        $styl = "background-color: #c7254e";
                     }
                     ?>
                     <tr class="text-primary">
                         <td> <input type="text" id="<?php echo $id ?>" name="<?php echo $i ?>[id]" value="<?php echo $id; ?>"readonly size="1"></td>
                         <td> <input type="text" name="" value="<?php echo $row[$i]['nombre']; ?>" size="15"  readonly ></td>
-                        <td> <input type="text" name="" value="<?php echo $row[$i]['Hinicio']; ?>"size="10" readonly></td>
-                        <td> <input type="text" name="" value="<?php echo $row[$i]['Hfinal']; ?>"size="10" readonly></td>
+                        <td> <input type="text" name="" value="<?php echo $row[$i]['Hinicio']; ?>"size="6" readonly></td>
+                        <td> <input type="text" name="" value="<?php echo $row[$i]['Hfinal']; ?>"size="6" readonly></td>
                         <td> <input type="text" name="" value="<?php echo $row[$i]['controles']; ?>"size="2" readonly></td>
                         <td> <input type="text" class="<?php echo $clase ?>"name="" value="<?php echo $row[$i]['tiempo_finalizar']; ?>"size="10" title="Tiempo que le queda para que finalize su renta" readonly></td>
-                        <td> <input type="text" class="" name="tiempo_trans" value="<?php echo $row[$i]['tiempo_transcurrido']; ?>"size="10" title="Tiempo que le queda para que finalize su renta" readonly></td>
+                        <td> <input type="text" style="" name="tiempo_trans" value="<?php echo $row[$i]['tiempo_transcurrido']; ?>"size="10" title="Tiempo que le queda para que finalize su renta" readonly></td>
                         <td> <input type="text" name="" value="<?php echo $row[$i]['tiempo_total']; ?>"size="10" title="Tiempo que lleva rentando" readonly></td>
                         <td> <input type="text" name="" value="<?php echo $row[$i]['total']; ?>"size="3" readonly>
-                            <span class="<?php echo $disa ?>"></span>
+                            <span style=" <?php echo $styl ?>" class="<?php echo $disa ?>"></span>
 
                         </td>
                         <td> <input type="text" name="total_Actual" value="<?php echo $row[$i]['total_Actual']; ?>"size="3" readonly></td>
-                        <td> <input class="btn- btn-success btn-sm btn-block" type="button" value="Agregar" onclick="agregar_renta('<?php echo $row[$i]['id']; ?>');"></td>
+                        <td> <input class="btn-sm" type="button" value="Compra" onclick="agregaVenta()"></td>
+                        <td> <input class="btn- btn-success btn-sm btn-block" type="button" value="Agregar Tiempo" onclick="agregar_renta('<?php echo $row[$i]['id']; ?>');"></td>
                         <td> <input class="btn btn-danger btn-sm btn-block" type="button" value="Terminar" onclick="terminar_renta('<?php echo $i ?>');"></td>                
                         <td> <input class="btn btn-primary btn-sm btn-block" type="button"  value="Pagado" onclick="pagada_renta('<?php echo $id ?>');"></td>                
 
@@ -70,7 +74,6 @@
                     <?php
                 }
             }
-            
             ?>
         </tbody>
     </table>
