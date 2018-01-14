@@ -5,13 +5,13 @@
                 <th>Id</th>
                 <th>Nombre</th>   
                 <th>HORA INICIO</th>
-                <th>HORA A FINALIZAR</th>                
+<!--                <th>HORA A FINALIZAR</th>                -->
                 <th>CONTROLES</th>
-                <th class="alert-warning">TOTAL RENTA</th>
-                <th class="">Tiempo Transurrido</th>
+                <th class="alert-warning">PARA QUE TERMINE?</th>
+                <th class="">CUANTO LLEVO?</th>
                 <th>TIEMPO QUE SOLICITO</th>
-                <th>$ TOTAL A PAGAR</th>
-                <th>$ TOTAL ACTUAL</th>
+<!--                <th>$ TOTAL A PAGAR</th>
+                <th>$ TOTAL ACTUAL</th>-->
                 <th></th>
                 <th></th>
 
@@ -36,8 +36,9 @@
                     $tiempo_final = $row[$i]['tiempo_finalizar'];
                     if ($tiempo_final > "00:00:00") {
                         $clase = "alert-danger";
-                        echo '<audio id="demo" src="/enaipeVG/sitie_media/audio/keyboard_desk.mp3" autoplay></audio>';
-                        echo"<script type=\"text/javascript\">alert('termino'); </script>";
+                        echo '<audio id="demo" src="/enaipeVG/sitie_media/audio/beep.mp3" autoplay></audio>';
+//                        echo"<script type=\"text/javascript\"> var audio = new Audio('/enaipeVG/sitie_media/audio/beep.mp3');
+//                            audio.play(); alert('termino'); </script>";
                     } else {
                         $clase = "";
                     }
@@ -54,16 +55,16 @@
                         <td> <input type="text" id="<?php echo $id ?>" name="<?php echo $i ?>[id]" value="<?php echo $id; ?>"readonly size="1"></td>
                         <td> <input type="text" name="" value="<?php echo $row[$i]['nombre']; ?>" size="15"  readonly ></td>
                         <td> <input type="text" name="" value="<?php echo $row[$i]['Hinicio']; ?>"size="6" readonly></td>
-                        <td> <input type="text" name="" value="<?php echo $row[$i]['Hfinal']; ?>"size="6" readonly></td>
+        <!--                        <td> <input type="text" name="" value="<?php // echo $row[$i]['Hfinal'];  ?>"size="6" readonly></td>-->
                         <td> <input type="text" name="" value="<?php echo $row[$i]['controles']; ?>"size="2" readonly></td>
                         <td> <input type="text" class="<?php echo $clase ?>"name="" value="<?php echo $row[$i]['tiempo_finalizar']; ?>"size="10" title="Tiempo que le queda para que finalize su renta" readonly></td>
                         <td> <input type="text" style="" name="tiempo_trans" value="<?php echo $row[$i]['tiempo_transcurrido']; ?>"size="10" title="Tiempo que le queda para que finalize su renta" readonly></td>
                         <td> <input type="text" name="" value="<?php echo $row[$i]['tiempo_total']; ?>"size="10" title="Tiempo que lleva rentando" readonly></td>
-                        <td> <input type="text" name="" value="<?php echo $row[$i]['total']; ?>"size="3" readonly>
-                            <span style=" <?php echo $styl ?>" class="<?php echo $disa ?>"></span>
+                        <!--<td> <input type="text" name="" value="<?php // echo $row[$i]['total'];  ?>"size="3" readonly>-->
+                        <td><span style=" <?php echo $styl ?>" class="<?php echo $disa ?>"></span></td>  
 
-                        </td>
-                        <td> <input type="text" name="total_Actual" value="<?php echo $row[$i]['total_Actual']; ?>"size="3" readonly></td>
+                        <!--</td>-->
+                        <!--<td> <input type="text" name="total_Actual" value="<?php // echo $row[$i]['total_Actual'];  ?>"size="3" readonly></td>-->
                         <td> <input class="btn-sm" type="button" value="Compra" onclick="agregaVenta()"></td>
                         <td> <input class="btn- btn-success btn-sm btn-block" type="button" value="Agregar Tiempo" onclick="agregar_renta('<?php echo $row[$i]['id']; ?>');"></td>
                         <td> <input class="btn btn-danger btn-sm btn-block" type="button" value="Terminar" onclick="terminar_renta('<?php echo $i ?>');"></td>                
@@ -95,7 +96,7 @@
         });
 
 
-        $("#b01").on("click", function () {
+        $("#demo").on("click", function () {
             ion.sound.play("beer_can_opening");
         });
 
